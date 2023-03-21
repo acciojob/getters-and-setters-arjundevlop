@@ -1,28 +1,32 @@
 //complete this code
 class Person {
 	constructor(name,age){
-		set setAge(age){
-			this.age = age;
-		}
+		this.name = name;
+		this.age = age;
+	}
 
-		get getName(){
+	get name(){
 		return this.name;
 	}
-		
+	set age(age){
+		this._age = age;
 	}
+	get age() {
+    return this._age;
+  }
 	
 }
 
 class Student extends Person {
-	study(){
-		console.log(this.name+" "+"is studying");
-	}
+	study() {
+    console.log(`${this._name} is studying`);
+  }
 }
 
 class Teacher extends Person {
-	teach(){
-		console.log(this.name+" "+"is teaching");
-	}
+	teach() {
+    console.log(`${this._name} is teaching`);
+  }
 }
 
 // Do not change the code below this line
